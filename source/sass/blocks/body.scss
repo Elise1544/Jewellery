@@ -1,0 +1,15 @@
+.body {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.body--no-scroll {
+  overflow: hidden;
+}

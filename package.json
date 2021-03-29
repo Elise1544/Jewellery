@@ -1,6 +1,6 @@
 {
-  "name": "smart-device",
-  "description": "Магазин электроники",
+  "name": "jewellery",
+  "description": "Интернет-магазин CH",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "10.2.x",

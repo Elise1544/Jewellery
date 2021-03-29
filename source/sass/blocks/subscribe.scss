@@ -1,0 +1,86 @@
+.subscribe {
+  position: relative;
+  margin-right: 4.5%;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 4.5%;
+    margin-right: 8.5%;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 5% 26px 3%;
+  }
+}
+
+.subscribe h3 {
+  margin-bottom: 5px;
+
+  font-family: "Cormorant Garamond", "Garamond", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 1px;
+
+  @media (max-width: $mobile-width) {
+    width: 80%;
+    letter-spacing: 0.7px;
+  }
+}
+
+.subscribe p {
+  margin-top: 9px;
+
+  @media (max-width: $mobile-width) {
+    width: 80%;
+  }
+}
+
+.subscribe input {
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+
+  background-color: transparent;
+  color: $white;
+  border: none;
+  border-bottom: 1px solid $white;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 17px;
+  }
+}
+
+.subscribe input::placeholder {
+  color: $placeholder;
+  letter-spacing: 1px;
+}
+
+.subscribe button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 107px;
+  height: 40px;
+  right: 0;
+  bottom: 0;
+  padding: 3px;
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.subscribe span {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.subscribe svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: auto;
+  stroke: $white;
+  width: 29px;
+  height: 9px;
+}
