@@ -54,18 +54,81 @@
       } else {
         header.classList.remove('header--open');
         header.classList.add('header--close');
-      };
+      }
       logo.classList.toggle('logo--open');
       cart.classList.toggle('header__cart--close');
     });
+  };
 
-    officeButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      officeButton.classList.toggle('footer__button--close');
-      office.classList.toggle('office__wrap--closed');
-      sectionsButton.classList.add('footer__button--close');
-      sections.classList.add('sections__list--closed');
-    });
-  }
+  const faqItems = document.querySelectorAll('.faq__item');
+
+  if (faqItems) {
+    for (let faqItem of faqItems) {
+      faqItem.addEventListener('click', function () {
+        faqItem.classList.toggle('faq__item--active');
+      })
+    }
+  };
+
+
+  new window.Swiper('.slider__container', {
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      }
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 25,
+        pagination: {
+          // el: '.swiper-pagination',
+          // clickable: true,
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>'
+          }
+        }
+      },
+      767: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 18,
+        pagination: {
+          // el: '.swiper-pagination',
+          // clickable: true,
+          type: 'bullets',
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
+        }
+      },
+      1023: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 22,
+        pagination: {
+          // el: '.swiper-pagination',
+          // clickable: true,
+          type: 'bullets',
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
+        }
+      }
+    },
+
+
+  });
 
 })();

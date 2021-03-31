@@ -1,0 +1,160 @@
+.slider {
+  position: relative;
+  margin: 0 auto;
+  padding: 92px 1% 50px 1%;
+  max-width: 1200px;
+  width: 100%;
+
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    max-width: 750px;
+    padding: 41px 3.5% 20px 3.5%;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 300px;
+    padding: 31px 1% 15px 1%;
+  }
+}
+
+.slider a {
+  display: block;
+}
+
+.slider img {
+  width: 270px;
+  height: 284px;
+
+  @media (max-width: $tablet-width) {
+    width: 324px;
+    height: 340px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 130px;
+    height: 136px;
+  }
+}
+
+.slider h2 {
+  margin-bottom: 25px;
+
+  font-family: "Cormorant Garamond", "Garamond", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.slider p {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 61px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  border-bottom: 1px solid $accent;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 49px;
+
+    line-height: 28px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 39px;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  width: 29px;
+  height: 9px;
+  top: 154px;
+  stroke: $accent;
+  fill: $accent;
+
+  @media (max-width: $tablet-width) {
+    width: 36px;
+    height: 15px;
+    top: 109px;
+  }
+}
+
+.slider__button svg {
+  width: 29px;
+  height: 9px;
+
+  @media (max-width: $tablet-width) {
+    width: 36px;
+    height: 15px;
+  }
+}
+
+.slider__button--prev {
+  left: 0;
+
+  @media (max-width: $tablet-width) {
+    left: 35px;
+  }
+}
+
+.slider__button--next {
+  right: 15px;
+
+  @media (max-width: $tablet-width) {
+    right: 35px;
+  }
+}
+
+.slider__link h3 {
+  margin-top: 15px;
+  margin-bottom: 7px;
+
+  color: $text;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 13px;
+  }
+}
+
+.slider__link p {
+  margin-bottom: 49px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.slider .swiper-pagination-bullet {
+  margin: 0 6px;
+  color: $placeholder;
+}
+
+.slider .swiper-pagination-bullet-active {
+  color: $text;
+}
+
+.slider .swiper-pagination-current,
+.slider .swiper-pagination-total {
+  margin: 0 6px;
+}

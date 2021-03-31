@@ -4,8 +4,8 @@
   height: 66px;
   top: 30px;
   left: calc(50% - 33px);
-  // fill="#A87B62"
   fill: $accent;
+  stroke: $accent;
 
   @media (max-width: $mobile-width) {
     width: 52px;
@@ -16,7 +16,9 @@
 }
 
 .logo--open {
-  fill: $white;
+  @media (max-width: $tablet-width) {
+    fill: $white;
+  }
 }
 
 .logo svg {

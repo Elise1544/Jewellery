@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "del": "^6.0.0",
-    "imask": "^6.0.7"
+    "imask": "^6.0.7",
+    "swiper": "^6.5.2"
   }
 }

@@ -5,13 +5,28 @@
   padding: 30px 6% 0 6%;
 
   @media (max-width: $tablet-width) {
-    padding: 30px 4% 38px 4%;
+    padding: 30px 4% 23px 4%;
 
     flex-direction: column;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 14px 0 5px;
+    padding: 14px 0 15px 0;
+  }
+}
+
+.header::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 65%;
+  left: 0;
+  background-color: $decor-line;
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -75,7 +90,7 @@
   }
 }
 
-.header__cart--close a:first-of-type{
+.header__cart--close a:first-of-type {
   @media (max-width: $tablet-width) {
     display: none;
   }
@@ -84,7 +99,7 @@
 .header__cart a {
   margin: 11px 16px;
 
-  @media (max-width: $mobile-width)  {
+  @media (max-width: $mobile-width) {
     margin: 11px 5px;
   }
 }
