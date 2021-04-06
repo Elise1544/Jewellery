@@ -1,0 +1,132 @@
+.crawlers__range {
+  position: relative;
+  margin: 7px 10%;
+
+  @media (max-width: $tablet-width) {
+    margin: 3px 21% 7px 7%;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 12px 7% 7px 7%;
+  }
+}
+
+.crawlers__scale {
+  position: relative;
+  height: 1px;
+  background-color: $background-blog;
+}
+
+.crawlers__bar {
+  position: absolute;
+  height: 1px;
+  width: 104px;
+  left: 26%;
+  background-color: $accent;
+
+  @media (max-width: $tablet-width) {
+    width: 176px;
+    left: 18%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 138px;
+  }
+}
+
+.crawlers__handle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: $accent;
+  border: none;
+  border-radius: 50%;
+  top: -7px;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: -9px;;
+  }
+}
+
+.crawlers__handle:hover,
+.crawlers__handle:focus {
+  width: 17px;
+  height: 17px;
+  top: -8px;
+
+  @media (max-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+  }
+}
+
+.crawlers__handle--min {
+  left: 22%;
+
+  @media (max-width: $tablet-width) {
+    left: 15%;
+  }
+  @media (max-width: $mobile-width) {
+    left: 13%;
+  }
+}
+
+.crawlers__handle--max {
+  right: 18%;
+
+  @media (max-width: $tablet-width) {
+    right: 21%;
+  }
+
+  @media (max-width: $mobile-width) {
+    right: 19%;
+  }
+}
+
+.crawlers__outputs {
+  display: flex;
+    justify-content: space-between;
+    margin: 7px 0 17px 12px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 36px;
+
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  @media (max-width: $mobile-width)  {
+    margin-bottom: 25px;
+  }
+}
+
+.crawlers__outputs div:first-of-type {
+  margin-left: 21%;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 13%;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 11%;
+  }
+}
+
+.crawlers__outputs div:last-of-type {
+  margin-right: 21%;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 35%;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 21%;
+  }
+}

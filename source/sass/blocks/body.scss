@@ -11,5 +11,7 @@
 }
 
 .body--no-scroll {
+  position: absolute;
   overflow: hidden;
+  width: 100%;
 }

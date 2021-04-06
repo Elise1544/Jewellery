@@ -1,0 +1,267 @@
+.filter {
+  margin-top: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.filter h2 {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    margin: 0 21px 0 15px;
+    padding: 23px 0;
+
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    color: $white;
+    background-color: $accent;
+    cursor: pointer;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 15px;
+  }
+}
+
+.filter__form {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.filter__form--active {
+  @media (max-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    width: 56%;
+    top: 34px;
+    left: 0;
+    z-index: 2;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    top: 73px;
+  }
+}
+
+.filter__block:not(:last-child) {
+  padding: 0;
+  border: 1px solid $accent;
+  border-bottom: none;
+}
+
+.filter__block:nth-last-child(2) {
+  border-bottom: 1px solid $accent;
+}
+
+.filter__form--active .filter__block:not(:last-child) {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid $accent;
+
+  @media (max-width: $mobile-width)  {
+    margin: 0 8%;
+  }
+}
+
+.filter fieldset:last-child {
+  border: none;
+}
+
+.filter__block div:not(.crawlers__outputs) {
+  display: none;
+}
+
+.filter__block--active div:not(.crawlers__outputs) {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__block--active:not(:nth-last-child(2)) div:first-of-type {
+  margin-left: 25px;
+}
+
+.filter__block h3 {
+  position: relative;
+  padding: 22px 24px;
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $text;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    padding: 27px 24px 37px 24px;
+
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 27px 24px 20px 24px;
+  }
+}
+
+.filter__block h3::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 8px;
+  background-image: url("../img/bottom.svg");
+  top: 29px;
+  right: 26px;
+
+  @media (max-width: $tablet-width) {
+    width: 20px;
+    height: 12px;
+    right: 44px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 32px;
+    right: 19px;
+  }
+}
+
+.filter__block--active h3::after {
+  background-image: url("../img/top.svg");
+}
+
+.filter__block label {
+  position: relative;
+  padding-left: 30px;
+  margin: 7px 0 6px 5px;
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    margin: 8px 0 9px 2px;
+    padding-left: 35px;
+
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.filter__block label:first-of-type {
+  margin-top: 2px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: -11px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 5px;
+  }
+}
+
+.filter__block label:last-of-type {
+  margin-bottom: 27px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 29px;
+  }
+}
+
+.filter__block input {
+  position: absolute;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  top: -1px;
+  left: 0;
+  border: 1px solid $accent;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.filter__block input:checked {
+  background-color: $accent;
+}
+
+.filter__buttons {
+  margin-top: 22px;
+  padding: 0;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 25px;
+    margin-left: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 21px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.filter__buttons button {
+  margin: 13px 0;
+  width: 100%;
+  min-height: 68px;
+  background-color: transparent;
+  color: $text;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 1px;
+  border: 1px solid $accent;
+
+  @media (max-width: $tablet-width) {
+    width: 89%;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 10px 0;
+    width: 73%;
+  }
+}
+
+.filter__buttons button:first-of-type {
+  background-color: $accent;
+  color: $white;
+}
+
+.filter__close {
+  display: none;
+}
+
+.filter__close--active {
+  @media (max-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 11px;
+    right: 43%;
+    background-image: url("../img/close.svg");
+    border: none;
+    border-radius: 50%;
+    z-index: 3;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 60px;
+    right: 5%;
+  }
+}

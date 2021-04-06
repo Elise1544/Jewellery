@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Интернет-магазин CH</title>
+  <title>Online store CH</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,7 +27,7 @@
       </svg>
     </a>
     <div class="header__cart">
-      <a href="modal.html">Login</a>
+      <a class="login" href="modal.html">Login</a>
       <a class="cart" href="cart.html">
         <svg role="img" width="20" height="18">
           <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -435,9 +435,15 @@
     </div>
   </footer>
 
-  <div class="modal modal--log-in" style="display: none;">
-    <form class="modal__form log-in" action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
-      <img src="" alt="">
+  <div class="log-in log-in--modal">
+    <button class="log-in__close close" type="button"><span class="visually-hidden">Close</span></button>
+    <picture>
+      <!-- 1x: 430; 2x: 860 -->
+      <source type="image/webp" srcset="img/sweet-ice-cream.webp 1x, img/sweet-ice-cream@2x.webp 2x">
+      <!-- 1x: 430; 2x: 860 -->
+      <img src="img/sweet-ice-cream.jpg" srcset="img/sweet-ice-cream@2x.jpg 2x" width="430" height="138" alt="Log-in photo">
+    </picture>
+    <form action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
       <h3>Log In</h3>
       <label>
         <input type="email" name="e-mail" placeholder="Your E-mail">
@@ -446,7 +452,7 @@
         <input type="password" name="password" placeholder="Password">
       </label>
       <a href="">Forgot your password?</a>
-      <button>
+      <button class="log-in__submit">
         <span>Log In</span>
       </button>
       <div class="log-in__no-registration">
@@ -456,6 +462,7 @@
     </form>
   </div>
 
+  <div class="modal-wrapper"></div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
