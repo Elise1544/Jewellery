@@ -2,6 +2,7 @@
   height: 463px;
   background-color: $accent;
   background-image: url("../img/intro-desktop.jpg");
+  background-size: cover;
 
   color: $white;
   text-align: center;
@@ -9,7 +10,6 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/intro-desktop@2x.jpg");
-    background-size: cover;
   }
 
   @media (max-width: $tablet-width) {

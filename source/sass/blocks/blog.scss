@@ -30,6 +30,11 @@
   border-bottom: 1px solid $accent;
 }
 
+.blog a:hover,
+.blog a:focus {
+  color: $accent;
+}
+
 .blog ul {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalog</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="body">
@@ -37,18 +39,18 @@
     </div>
     <div class="header__sections sections">
       <ul>
-        <li><a href="">What's new</a></li>
-        <li><a href="">Chokers</a></li>
-        <li><a href="">Necklaces</a></li>
-        <li><a href="">Rings</a></li>
-        <li><a href="">Earrings</a></li>
+        <li><a href="#">What's new</a></li>
+        <li><a href="#">Chokers</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
       </ul>
     </div>
     <div class="header__company company">
       <ul>
-        <li><a href="">About CH</a></li>
-        <li><a href="">Stores & Hours</a></li>
-        <li><a href="">Contact Us</a></li>
+        <li><a href="#">About CH</a></li>
+        <li><a href="#">Stores & Hours</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
     </div>
   </header>
@@ -63,7 +65,7 @@
       <div class="catalog__filter filter">
         <h2>Filter</h2>
         <button class="filter__close"><span class="visually-hidden">Закрыть фильтр</span></button>
-        <form class="filter__form" action="">
+        <form class="filter__form" action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
           <fieldset class="filter__block filter__block--active">
             <h3>Product</h3>
             <div>
@@ -260,7 +262,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="product.html">
                     <picture>
                       <!-- 1x: 270, 2x: 540 -->
                       <source type="image/webp"
@@ -431,7 +433,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="product.html">
                     <picture>
                       <!-- 1x: 270, 2x: 540 -->
                       <source type="image/webp"
@@ -602,7 +604,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="product.html">
                     <picture>
                       <!-- 1x: 270, 2x: 540 -->
                       <source type="image/webp"
@@ -773,7 +775,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="product.html">
                     <picture>
                       <!-- 1x: 270, 2x: 540 -->
                       <source type="image/webp"
@@ -944,7 +946,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="product.html">
                     <picture>
                       <!-- 1x: 270, 2x: 540 -->
                       <source type="image/webp"
@@ -1019,18 +1021,18 @@
     </form>
     <div class="footer__conditions conditions">
       <ul>
-        <li><a href="">Ordering & Payment</a></li>
-        <li><a href="">Terms & Conditions</a></li>
-        <li><a href="">Returns & Exchanges</a></li>
-        <li><a href="">Delivery</a></li>
+        <li><a href="#">Ordering & Payment</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Returns & Exchanges</a></li>
+        <li><a href="#">Delivery</a></li>
       </ul>
     </div>
     <div class="footer__about about">
       <ul>
-        <li><a href="">About CH</a></li>
-        <li><a href="">Stores & Hours</a></li>
-        <li><a href="">Jobs</a></li>
-        <li><a href="">Contact Us</a></li>
+        <li><a href="#">About CH</a></li>
+        <li><a href="#">Stores & Hours</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
     </div>
     <div class="footer__social social">
@@ -1082,18 +1084,18 @@
     <form action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
       <h3>Log In</h3>
       <label>
-        <input type="email" name="e-mail" placeholder="Your E-mail">
+        <input type="email" name="e-mail" placeholder="Your E-mail" required>
       </label>
       <label>
-        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="password" placeholder="Password" required>
       </label>
-      <a href="">Forgot your password?</a>
+      <a href="#">Forgot your password?</a>
       <button class="log-in__submit">
         <span>Log In</span>
       </button>
       <div class="log-in__no-registration">
         <p>Don’t have an account?</p>
-        <a>Sign up</a>
+        <a href="#">Sign up</a>
       </div>
     </form>
   </div>

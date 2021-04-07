@@ -140,3 +140,9 @@
     display: none;
   }
 }
+
+
+.header a:hover,
+.header a:focus {
+  color: $accent;
+}

@@ -125,6 +125,11 @@
   text-align: end;
 }
 
+.log-in a:hover,
+.log-in a:focus {
+  color: $accent;
+}
+
 .log-in__submit {
   margin-top: 45px;
   display: flex;
@@ -134,14 +139,21 @@
 
   color: $white;
   background-color: $accent;
-  border: none;
+  border: 1px solid $accent;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     margin-top: 37px;
   }
+}
+
+.log-in__submit:hover,
+.log-in__submit:focus {
+  background-color: transparent;
+  color: $text;
 }
 
 .log-in__no-registration {
@@ -163,6 +175,11 @@
   @media (max-width: $tablet-width) {
     margin: auto 2px;
   }
+}
+
+.log-in__no-registration a:hover,
+.log-in__no-registration a:focus {
+  color: $accent;
 }
 
 .log-in .close::before,

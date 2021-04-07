@@ -8,18 +8,15 @@
   text-align: center;
 
   @media (max-width: $tablet-width) {
-    // max-width: 750px;
     padding: 41px 3.5% 20px 3.5%;
   }
 
   @media (max-width: $mobile-width) {
-    // max-width: 300px;
     padding: 31px 1% 15px 1%;
   }
 }
 
 .slider__wrapper {
-
   @media (max-width: $tablet-width) {
     max-width: 685px;
     padding: 0 15px;
@@ -57,13 +54,9 @@
   @media (max-width: $tablet-width) {
     width: 100%;
     height: auto;
-    // width: 324px;
-    // height: 340px;
   }
 
   @media (max-width: $mobile-width) {
-    // width: 130px;
-    // height: 136px;
     width: 100%;
     height: auto;
   }
@@ -112,6 +105,7 @@
   top: 154px;
   stroke: $accent;
   fill: $accent;
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     width: 36px;
@@ -130,6 +124,11 @@
   @media (max-width: $tablet-width) {
     top: 71px;
   }
+}
+
+.slider__button:hover,
+.slider__button:focus {
+  stroke: $text;
 }
 
 .slider__button svg {
@@ -167,7 +166,6 @@
 }
 
 .slider__link {
-
   @media (max-width: $tablet-width) {
     width: 92%;
   }
@@ -175,6 +173,13 @@
   @media (max-width: $mobile-width) {
     width: 88%;
   }
+}
+
+.slider a:hover,
+.slider a:focus,
+.slider__link:hover h3,
+.slider__link:focus h3 {
+  color: $accent;
 }
 
 .slider__link h3 {
@@ -213,7 +218,14 @@
 .slider .swiper-pagination-bullet {
   margin: 0 6px;
   color: $placeholder;
+  cursor: pointer;
 }
+
+.slider .swiper-pagination-bullet:hover,
+.slider .swiper-pagination-bullet:focus {
+  color: $accent;
+}
+
 
 .slider .swiper-pagination-bullet-active {
   color: $text;

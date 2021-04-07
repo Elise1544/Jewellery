@@ -279,3 +279,15 @@
   color: $white;
   background-color: $accent;
 }
+
+.shopping-cart__order a:hover,
+.shopping-cart__order a:focus {
+  color: $white;
+  background-color: $accent;
+}
+
+.shopping-cart__order a:last-of-type:hover,
+.shopping-cart__order a:last-of-type:focus {
+  color: $text;
+  background-color: transparent;
+}

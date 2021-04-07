@@ -65,9 +65,17 @@
   bottom: 0;
   padding: 3px;
   color: inherit;
+  stroke: $white;
   font-size: inherit;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.subscribe button:hover,
+.subscribe button:focus {
+  color: $accent;
+  stroke: $accent;
 }
 
 .subscribe span {
@@ -80,7 +88,6 @@
   display: inline-block;
   vertical-align: middle;
   margin-left: auto;
-  stroke: $white;
   width: 29px;
   height: 9px;
 }

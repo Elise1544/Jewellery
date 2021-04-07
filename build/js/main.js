@@ -29,7 +29,7 @@
         logo.classList.toggle('logo--open');
         cart.classList.toggle('header__cart--close');
       });
-    };
+    }
   }
 
   const faqItems = document.querySelectorAll('.faq__item');
@@ -40,13 +40,13 @@
         faqItem.classList.toggle('faq__item--active');
       })
     }
-  };
+  }
 
   new window.Swiper('.slider__container', {
 
     navigation: {
       nextEl: '.slider__button--next',
-      prevEl: '.slider__button--prev'
+      prevEl: '.slider__button--prev',
     },
 
     pagination: {
@@ -54,7 +54,7 @@
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
-      }
+      },
     },
 
     breakpoints: {
@@ -66,8 +66,8 @@
           type: 'fraction',
           renderFraction: function (currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>'
-          }
-        }
+          },
+        },
       },
       767: {
         slidesPerView: 2,
@@ -77,8 +77,8 @@
           type: 'bullets',
           renderBullet: function (index, className) {
             return '<span class="' + className + '">' + (index + 1) + '</span>';
-          }
-        }
+          },
+        },
       },
       1023: {
         slidesPerView: 4,
@@ -88,9 +88,9 @@
           type: 'bullets',
           renderBullet: function (index, className) {
             return '<span class="' + className + '">' + (index + 1) + '</span>';
-          }
-        }
-      }
+          },
+        },
+      },
     },
   });
 
@@ -99,7 +99,7 @@
 
     navigation: {
       nextEl: '.store__button--next',
-      prevEl: '.store__button--prev'
+      prevEl: '.store__button--prev',
     },
 
     pagination: {
@@ -107,7 +107,7 @@
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
-      }
+      },
     },
 
   });
@@ -132,7 +132,7 @@
       filterNames[i].addEventListener('click', function () {
         filterBlocks[i].classList.toggle('filter__block--active');
       });
-    };
+    }
 
     filterTitle.addEventListener('click', function () {
       filterForm.classList.add('filter__form--active');
@@ -153,7 +153,7 @@
         closeFilter();
       }
     });
-  };
+  }
 
   const information = document.querySelector('.information');
 
@@ -176,7 +176,7 @@
       descriptionBlock.classList.remove('information__block--active');
       additionalBlock.classList.add('information__block--active');
     });
-  };
+  }
 
   new window.Swiper('.product__pictures--slider', {
     pagination: {
@@ -185,13 +185,12 @@
       type: 'fraction',
       renderFraction: function (currentClass, totalClass) {
         return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>'
-      }
+      },
     },
   });
 
 
   // модалка корзины
-  const body = document.querySelector('body');
   const buttonCartMore = document.querySelector('.shopping-cart__button--more');
   const buttonCartLess = document.querySelector('.shopping-cart__button--less');
   const shoppingCartInput = document.querySelector('.shopping-cart__input');
@@ -226,7 +225,7 @@
       if (shoppingCartInput.value < 99) {
         ++shoppingCartInput.value;
       }
-    } else {
+    } else if (evt.target === buttonCartLess) {
       if (shoppingCartInput.value > 1) {
         --shoppingCartInput.value;
       }
@@ -235,14 +234,17 @@
 
 
   // модалка входа
-  const modalLogIn = document.querySelector('.log-in--modal')
+  const modalLogIn = document.querySelector('.log-in--modal');
+  const email = modalLogIn.querySelector('input[type="email"]');
   const buttonLogIn = document.querySelector('.login');
   const buttonCloseLogIn = document.querySelector('.log-in__close');
+
 
   buttonLogIn.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalLogIn.classList.add('log-in--active');
     wrapper.classList.add('modal-wrapper--active');
+    email.focus();
   });
 
   const closeLogIn = function () {

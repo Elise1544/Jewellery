@@ -5,10 +5,10 @@
   color: $white;
   background-color: $accent;
   background-image: url("../img/intro-desktop-catalog.jpg");
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/intro-desktop-catalog@2x.jpg");
-    background-size: cover;
   }
 
   @media (max-width: $tablet-width) {

@@ -34,6 +34,11 @@
   }
 }
 
+.pictures a:hover,
+.pictures a:focus {
+  color: $accent;
+}
+
 .pictures ul {
   margin: 29px 15px;
   list-style: none;

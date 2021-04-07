@@ -51,7 +51,7 @@
   border-bottom: none;
 }
 
-.faq__item:after {
+.faq__item::after {
   position: absolute;
   content: "";
   width: 15px;
@@ -76,7 +76,7 @@
   }
 }
 
-.faq__item--active:after {
+.faq__item--active::after {
   background-image: url("../img/top.svg");
 }
 

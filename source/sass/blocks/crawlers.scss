@@ -20,17 +20,17 @@
 .crawlers__bar {
   position: absolute;
   height: 1px;
-  width: 104px;
+  width: 53%;
   left: 26%;
   background-color: $accent;
 
   @media (max-width: $tablet-width) {
-    width: 176px;
+    width: 58%px;
     left: 18%;
   }
 
   @media (max-width: $mobile-width) {
-    width: 138px;
+    width: 59%;
   }
 }
 
@@ -46,7 +46,7 @@
   @media (max-width: $tablet-width) {
     width: 18px;
     height: 18px;
-    top: -9px;;
+    top: -9px;
   }
 }
 
@@ -69,6 +69,7 @@
   @media (max-width: $tablet-width) {
     left: 15%;
   }
+
   @media (max-width: $mobile-width) {
     left: 13%;
   }
@@ -88,8 +89,8 @@
 
 .crawlers__outputs {
   display: flex;
-    justify-content: space-between;
-    margin: 7px 0 17px 12px;
+  justify-content: space-between;
+  margin: 7px 0 17px 12px;
 
   font-weight: 500;
   font-size: 14px;
@@ -102,7 +103,7 @@
     line-height: 21px;
   }
 
-  @media (max-width: $mobile-width)  {
+  @media (max-width: $mobile-width) {
     margin-bottom: 25px;
   }
 }

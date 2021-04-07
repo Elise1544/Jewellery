@@ -32,3 +32,10 @@
 .close::after {
   transform: rotate(45deg);
 }
+
+.close:hover::before,
+.close:hover::after,
+.close:focus::before,
+.close:focus::after {
+  background-color: $accent;
+}

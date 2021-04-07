@@ -53,3 +53,13 @@
     margin: 18px 10px;
   }
 }
+
+.footer a {
+  fill: $white;
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: $accent;
+  fill: $accent;
+}
