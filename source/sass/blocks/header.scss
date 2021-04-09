@@ -121,8 +121,17 @@
   }
 }
 
+
 .header--open svg {
   stroke: $white;
+}
+
+.header .search,
+.header .sections,
+.header .company {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .header--open .search,
@@ -132,15 +141,6 @@
     display: block;
   }
 }
-
-.header--close .search,
-.header--close .sections,
-.header--close .company {
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
-}
-
 
 .header a:hover,
 .header a:focus {

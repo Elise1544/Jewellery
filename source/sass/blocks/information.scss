@@ -27,7 +27,7 @@
   line-height: 34px;
 }
 
-.information__title {
+.information__title h3 {
   display: inline-block;
   vertical-align: middle;
   margin-top: 10px;
@@ -43,15 +43,6 @@
     margin-top: 2px;
     margin-right: 35px;
   }
-}
-
-.information__title:hover,
-.information__title:focus {
-  color: $accent;
-}
-
-.information__title--active {
-  color: $text;
 }
 
 .information__block {
