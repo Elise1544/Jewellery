@@ -21,6 +21,7 @@
 .shopping-cart--active {
   display: block;
   position: absolute;
+  overflow: scroll;
   z-index: 2;
   top: 19.5%;
   left: calc(50% - 250px);
@@ -212,6 +213,10 @@
 .shopping-cart__add input::-webkit-outer-spin-button,
 .shopping-cart__add input::-webkit-inner-spin-button {
   appearance: none;
+}
+
+.shopping-cart__add input[type="number"] {
+  appearance: textfield;
 }
 
 .shopping-cart__price {

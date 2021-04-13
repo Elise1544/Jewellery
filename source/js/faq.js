@@ -11,6 +11,14 @@
         faqItems[i].classList.toggle('faq__item--active');
       });
     }
+
+    for (let i = 0; i < faqItems.length; i++) {
+      faqItems[i].addEventListener('keydown', function (evt) {
+        if (evt.key === 'Enter') {
+          faqItems[i].classList.toggle('faq__item--active');
+        }
+      });
+    }
   }
 
 })();

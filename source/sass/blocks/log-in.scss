@@ -22,6 +22,7 @@
   z-index: 2;
   top: 2.44%;
   left: calc(50% - 215px);
+  overflow-y: scroll;
 
   background-color: $background-blog;
 
@@ -105,6 +106,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $text;
+  border-radius: 0;
 
   @media (max-width: $mobile-width) {
     margin: 10px 0;
@@ -116,7 +118,10 @@
 }
 
 .log-in a {
+  display: inline-block;
+  vertical-align: middle;
   margin-top: -7px;
+  margin-left: auto;
 
   font-weight: 500;
   font-size: 12px;

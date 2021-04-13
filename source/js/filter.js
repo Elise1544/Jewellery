@@ -22,10 +22,28 @@
       });
     }
 
+    for (let i = 0; i < filterNames.length; i++) {
+      filterNames[i].addEventListener('keydown', function (evt) {
+        if (evt.key === 'Enter') {
+          filterBlocks[i].classList.toggle('filter__block--active');
+        }
+      });
+    }
+
+    filterForm.classList.remove('filter__form--active');
+
     filterTitle.addEventListener('click', function () {
       filterForm.classList.add('filter__form--active');
       filterClose.classList.add('filter__close--active');
       wrapper.classList.add('modal-wrapper--active');
+    });
+
+    filterTitle.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Enter') {
+        filterForm.classList.add('filter__form--active');
+        filterClose.classList.add('filter__close--active');
+        wrapper.classList.add('modal-wrapper--active');
+      }
     });
 
     const closeFilter = function () {

@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin: 0 5% 26px 3%;
+    margin: 0 0 26px 3%;
   }
 }
 
@@ -44,6 +44,7 @@
   color: $white;
   border: none;
   border-bottom: 1px solid $white;
+  border-radius: 0;
 
   @media (max-width: $tablet-width) {
     margin-top: 17px;

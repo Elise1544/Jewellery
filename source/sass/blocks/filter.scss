@@ -1,5 +1,6 @@
 .filter {
   margin-top: 20px;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     margin-top: 0;
@@ -40,14 +41,13 @@
     position: absolute;
     background-color: $white;
     width: 56%;
-    top: 34px;
+    top: 67px;
     left: 0;
     z-index: 2;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    top: 73px;
   }
 }
 
@@ -266,7 +266,7 @@
     position: absolute;
     width: 32px;
     height: 32px;
-    top: 11px;
+    top: 50px;
     right: 43%;
     background-image: url("../img/close.svg");
     border: none;
@@ -276,7 +276,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    top: 60px;
+    top: 50px;
     right: 5%;
   }
 }

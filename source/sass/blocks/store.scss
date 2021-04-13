@@ -10,7 +10,7 @@
 }
 
 .store__wrapper {
-  max-width: 1200px;
+  max-width: 897px;
   width: 100%;
 
   @media (max-width: $tablet-width) {
@@ -45,7 +45,7 @@
 }
 
 .store__slide li {
-  width: 33%;
+  width: 33.2%;
 
   @media (max-width: $tablet-width) {
     width: 33%;
@@ -58,7 +58,7 @@
 
 .store__slide a {
   display: block;
-  margin: 17px 15px;
+  margin: 17px 16px;
 
   color: $text;
 
@@ -67,7 +67,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin: 12px 15px;
+    margin: 11px 15px;
   }
 }
 
@@ -128,7 +128,7 @@
 
   @media (max-width: $mobile-width) {
     justify-content: center;
-    margin-top: 29px;
+    margin-top: 10px;
   }
 }
 
@@ -138,8 +138,12 @@
 }
 
 .store__button--prev {
-  margin-left: 17px;
+  margin-left: 12px;
   cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 15px;
+  }
 
   @media (max-width: $mobile-width) {
     display: none;

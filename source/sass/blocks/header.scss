@@ -146,3 +146,13 @@
 .header a:focus {
   color: $accent;
 }
+
+.header--open a:hover,
+.header--open a:focus {
+  color: $text;
+}
+
+
+.header--main .logo {
+  cursor: auto;
+}

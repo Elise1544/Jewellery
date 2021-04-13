@@ -7,6 +7,7 @@
   const buttonCartLess = document.querySelector('.shopping-cart__button--less');
   const modalCart = document.querySelector('.shopping-cart--modal');
   const wrapper = document.querySelector('.modal-wrapper');
+  const body = document.querySelector('.body');
 
   if (modalCart) {
     const buttonBuy = document.querySelector('.information__button');
@@ -17,12 +18,14 @@
         evt.preventDefault();
         modalCart.classList.add('shopping-cart--active');
         wrapper.classList.add('modal-wrapper--active');
+        body.classList.add('body--no-scroll');
       }
     })
 
     const closeCart = function () {
       modalCart.classList.remove('shopping-cart--active');
       wrapper.classList.remove('modal-wrapper--active');
+      body.classList.remove('body--no-scroll');
     }
 
     buttonCloseCart.addEventListener('click', closeCart);

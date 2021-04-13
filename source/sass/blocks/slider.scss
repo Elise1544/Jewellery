@@ -17,6 +17,8 @@
 }
 
 .slider__wrapper {
+  max-width: 1023px;
+
   @media (max-width: $tablet-width) {
     max-width: 685px;
     padding: 0 15px;
@@ -48,8 +50,10 @@
 }
 
 .slider img {
-  width: 270px;
-  height: 284px;
+  // width: 270px;
+  // height: 284px;
+  width: 97%;
+  height: auto;
 
   @media (max-width: $tablet-width) {
     width: 100%;

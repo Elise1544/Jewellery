@@ -7,6 +7,7 @@
   const buttonCartLess = document.querySelector('.shopping-cart__button--less');
   const modalCart = document.querySelector('.shopping-cart--modal');
   const wrapper = document.querySelector('.modal-wrapper');
+  const body = document.querySelector('.body');
 
   if (modalCart) {
     const buttonBuy = document.querySelector('.information__button');
@@ -17,12 +18,14 @@
         evt.preventDefault();
         modalCart.classList.add('shopping-cart--active');
         wrapper.classList.add('modal-wrapper--active');
+        body.classList.add('body--no-scroll');
       }
     })
 
     const closeCart = function () {
       modalCart.classList.remove('shopping-cart--active');
       wrapper.classList.remove('modal-wrapper--active');
+      body.classList.remove('body--no-scroll');
     }
 
     buttonCloseCart.addEventListener('click', closeCart);
@@ -65,6 +68,14 @@
         faqItems[i].classList.toggle('faq__item--active');
       });
     }
+
+    for (let i = 0; i < faqItems.length; i++) {
+      faqItems[i].addEventListener('keydown', function (evt) {
+        if (evt.key === 'Enter') {
+          faqItems[i].classList.toggle('faq__item--active');
+        }
+      });
+    }
   }
 
 })();
@@ -93,10 +104,28 @@
       });
     }
 
+    for (let i = 0; i < filterNames.length; i++) {
+      filterNames[i].addEventListener('keydown', function (evt) {
+        if (evt.key === 'Enter') {
+          filterBlocks[i].classList.toggle('filter__block--active');
+        }
+      });
+    }
+
+    filterForm.classList.remove('filter__form--active');
+
     filterTitle.addEventListener('click', function () {
       filterForm.classList.add('filter__form--active');
       filterClose.classList.add('filter__close--active');
       wrapper.classList.add('modal-wrapper--active');
+    });
+
+    filterTitle.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Enter') {
+        filterForm.classList.add('filter__form--active');
+        filterClose.classList.add('filter__close--active');
+        wrapper.classList.add('modal-wrapper--active');
+      }
     });
 
     const closeFilter = function () {
@@ -148,6 +177,7 @@
   const buttonLogIn = document.querySelector('.login');
   const buttonCloseLogIn = document.querySelector('.log-in__close');
   const wrapper = document.querySelector('.modal-wrapper');
+  const body = document.querySelector('.body');
 
   buttonLogIn.addEventListener('click', function (evt) {
     if (document.querySelector('.log-in--modal')) {
@@ -157,12 +187,14 @@
       modalLogIn.classList.add('log-in--active');
       wrapper.classList.add('modal-wrapper--active');
       email.focus();
+      body.classList.add('body--no-scroll');
     }
   });
 
   const closeLogIn = function () {
     modalLogIn.classList.remove('log-in--active');
     wrapper.classList.remove('modal-wrapper--active');
+    body.classList.remove('body--no-scroll');
   };
 
   buttonCloseLogIn.addEventListener('click', closeLogIn);

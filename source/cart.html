@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Online store CH">
   <title>Cart</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="anonymous">
@@ -15,6 +16,7 @@
     <button class="header__menu"></button>
     <form class="header__form search" action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
       <button type="submit">
+        <span class="visually-hidden">Поиск</span>
         <svg role="img" width="14" height="14">
           <use xlink:href="img/sprite.svg#icon-search"></use>
         </svg>
@@ -54,7 +56,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="body__main main">
     <h1 class="visually-hidden">Корзина</h1>
     <div class="shopping-cart">
       <button class="shopping-cart__close close"><span class="visually-hidden">Close</span></button>
@@ -72,9 +74,11 @@
           <p>$ 115</p>
         </div>
         <div class="shopping-cart__add">
-          <button class="shopping-cart__button shopping-cart__button--more"><span class="visually-hidden">Больше</span></button>
-            <input type="number"  min="1" max="99" value="1">
-          <button class="shopping-cart__button shopping-cart__button--less"><span class="visually-hidden">Меньше</span></button>
+          <button class="shopping-cart__button shopping-cart__button--more"><span
+              class="visually-hidden">Больше</span></button>
+          <input type="number" min="1" max="99" value="1">
+          <button class="shopping-cart__button shopping-cart__button--less"><span
+              class="visually-hidden">Меньше</span></button>
         </div>
       </div>
       <div class="shopping-cart__price">
@@ -89,80 +93,82 @@
   </main>
 
   <footer class="body__footer footer">
-    <form class="footer__form subscribe" action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
-      <h3>The good stuff in your inbox </h3>
-      <p>News and updates from CH. No spam, we promise.</p>
-      <label>
-        <input type="email" name="e-mail" placeholder="Your E-mail">
-      </label>
-      <button>
-        <span>Sign Up</span>
-        <svg role="img" width="29" height="9">
-          <use xlink:href="img/sprite.svg#icon-next"></use>
-        </svg>
-      </button>
-    </form>
-    <div class="footer__conditions conditions">
-      <ul>
-        <li># href="#">Ordering & Payment</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Returns & Exchanges</a></li>
-        <li><a href="#">Delivery</a></li>
-      </ul>
-    </div>
-    <div class="footer__about about">
-      <ul>
-        <li><a href="#">About CH</a></li>
-        <li><a href="#">Stores & Hours</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="footer__social social">
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/">
-            <svg role="img" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
-            </svg>
-            <span>Facebook</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/?hl=ru">
-            <svg role="img" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-instagram"></use>
-            </svg>
-            <span>Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.pinterest.ru/">
-            <svg role="img" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-pinterest"></use>
-            </svg>
-            <span>Pinterest</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/?lang=ru">
-            <svg role="img" width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-twitter"></use>
-            </svg>
-            <span>Twitter</span>
-          </a>
-        </li>
-      </ul>
+    <div class="footer__wrap">
+      <form class="footer__form subscribe" action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
+        <h3>The good stuff in your inbox </h3>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <label>
+          <input type="email" name="e-mail" placeholder="Your E-mail" required>
+        </label>
+        <button>
+          <span>Sign Up</span>
+          <svg role="img" width="29" height="9">
+            <use xlink:href="img/sprite.svg#icon-next"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="footer__conditions conditions">
+        <ul>
+          <li><a href="#">Ordering & Payment</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Delivery</a></li>
+        </ul>
+      </div>
+      <div class="footer__about about">
+        <ul>
+          <li><a href="#">About CH</a></li>
+          <li><a href="#">Stores & Hours</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__social social">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/">
+              <svg role="img" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/?hl=ru">
+              <svg role="img" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.ru/">
+              <svg role="img" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+              </svg>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/?lang=ru">
+              <svg role="img" width="15" height="15">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 
   <div class="log-in log-in--modal">
-    <button class="log-in__close close" type="button"><span class="visually-hidden">Close</span></button>
     <picture>
       <!-- 1x: 430; 2x: 860 -->
       <source type="image/webp" srcset="img/sweet-ice-cream.webp 1x, img/sweet-ice-cream@2x.webp 2x">
       <!-- 1x: 430; 2x: 860 -->
-      <img src="img/sweet-ice-cream.jpg" srcset="img/sweet-ice-cream@2x.jpg 2x" width="430" height="138" alt="Log-in photo">
+      <img src="img/sweet-ice-cream.jpg" srcset="img/sweet-ice-cream@2x.jpg 2x" width="430" height="138"
+        alt="Log-in photo">
     </picture>
     <form action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
       <h3>Log In</h3>
@@ -181,6 +187,7 @@
         <a href="#">Sign up</a>
       </div>
     </form>
+    <button class="log-in__close close" type="button"><span class="visually-hidden">Close</span></button>
   </div>
 
   <div class="modal-wrapper"></div>
