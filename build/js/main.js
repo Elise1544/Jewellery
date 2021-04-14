@@ -86,8 +86,9 @@
 
   const wrapper = document.querySelector('.modal-wrapper');
   const filter = document.querySelector('.filter');
+  const body = document.querySelector('.body');
 
-  if (filter) {
+  if (document.querySelector('.filter')) {
     const filterBlocks = filter.querySelectorAll('.filter__block');
     const filterNames = filter.querySelectorAll('.filter__block h3');
     const filterTitle = filter.querySelector('h2');
@@ -115,16 +116,22 @@
     filterForm.classList.remove('filter__form--active');
 
     filterTitle.addEventListener('click', function () {
-      filterForm.classList.add('filter__form--active');
-      filterClose.classList.add('filter__close--active');
-      wrapper.classList.add('modal-wrapper--active');
+      if (filter.querySelector('.filter__form')) {
+        filterForm.classList.add('filter__form--active');
+        filterClose.classList.add('filter__close--active');
+        wrapper.classList.add('modal-wrapper--active');
+        body.classList.add('body--absolute');
+      }
     });
 
     filterTitle.addEventListener('keydown', function (evt) {
       if (evt.key === 'Enter') {
-        filterForm.classList.add('filter__form--active');
-        filterClose.classList.add('filter__close--active');
-        wrapper.classList.add('modal-wrapper--active');
+        if (filter.querySelector('.filter__form')) {
+          filterForm.classList.add('filter__form--active');
+          filterClose.classList.add('filter__close--active');
+          wrapper.classList.add('modal-wrapper--active');
+          body.classList.add('body--absolute');
+        }
       }
     });
 
@@ -132,6 +139,7 @@
       filterForm.classList.remove('filter__form--active');
       filterClose.classList.remove('filter__close--active');
       wrapper.classList.remove('modal-wrapper--active');
+      body.classList.remove('body--absolute');
     }
 
     filterClose.addEventListener('click', closeFilter);
@@ -154,16 +162,18 @@
   const logo = document.querySelector('.logo');
   const cart = document.querySelector('.header__cart');
 
-  if (header) {
+  if (document.querySelector('.header')) {
     header.classList.remove('header--open');
     logo.classList.remove('logo--open');
     cart.classList.add('header__cart--close');
 
     headerMenu.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      header.classList.toggle('header--open');
-      logo.classList.toggle('logo--open');
-      cart.classList.toggle('header__cart--close');
+      if (header.querySelector('.header__sections') || header.querySelector('.header__company') || header.querySelector('.header__form')) {
+        evt.preventDefault();
+        header.classList.toggle('header--open');
+        logo.classList.toggle('logo--open');
+        cart.classList.toggle('header__cart--close');
+      }
     });
   }
 
@@ -286,26 +296,28 @@
 (function () {
 
   const information = document.querySelector('.information');
+  const LIGHT_COLOR = '#9b9997';
+  const DARK_COLOR = '#1d1613';
 
   if (information) {
     const titles = document.querySelector('.information__title').querySelectorAll('h3');
     const titleDescription = titles[0];
     const titleAdditional = titles[1];
-    titleDescription.style.color = '#9b9997';
-    titleAdditional.style.color = '#1d1613';
+    titleDescription.style.color = LIGHT_COLOR;
+    titleAdditional.style.color = DARK_COLOR;
     const descriptionBlock = document.querySelector('.information__block--description');
     const additionalBlock = document.querySelector('.information__block--additional');
 
     titleDescription.addEventListener('click', function () {
-      titleDescription.style.color = '#1d1613';
-      titleAdditional.style.color = '#9b9997';
+      titleDescription.style.color = DARK_COLOR;
+      titleAdditional.style.color = LIGHT_COLOR;
       descriptionBlock.classList.add('information__block--active');
       additionalBlock.classList.remove('information__block--active');
     });
 
     titleAdditional.addEventListener('click', function () {
-      titleDescription.style.color = '#9b9997';
-      titleAdditional.style.color = '#1d1613';
+      titleDescription.style.color = LIGHT_COLOR;
+      titleAdditional.style.color = DARK_COLOR;
       descriptionBlock.classList.remove('information__block--active');
       additionalBlock.classList.add('information__block--active');
     });

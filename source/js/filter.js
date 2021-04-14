@@ -4,8 +4,9 @@
 
   const wrapper = document.querySelector('.modal-wrapper');
   const filter = document.querySelector('.filter');
+  const body = document.querySelector('.body');
 
-  if (filter) {
+  if (document.querySelector('.filter')) {
     const filterBlocks = filter.querySelectorAll('.filter__block');
     const filterNames = filter.querySelectorAll('.filter__block h3');
     const filterTitle = filter.querySelector('h2');
@@ -33,16 +34,22 @@
     filterForm.classList.remove('filter__form--active');
 
     filterTitle.addEventListener('click', function () {
-      filterForm.classList.add('filter__form--active');
-      filterClose.classList.add('filter__close--active');
-      wrapper.classList.add('modal-wrapper--active');
+      if (filter.querySelector('.filter__form')) {
+        filterForm.classList.add('filter__form--active');
+        filterClose.classList.add('filter__close--active');
+        wrapper.classList.add('modal-wrapper--active');
+        body.classList.add('body--absolute');
+      }
     });
 
     filterTitle.addEventListener('keydown', function (evt) {
       if (evt.key === 'Enter') {
-        filterForm.classList.add('filter__form--active');
-        filterClose.classList.add('filter__close--active');
-        wrapper.classList.add('modal-wrapper--active');
+        if (filter.querySelector('.filter__form')) {
+          filterForm.classList.add('filter__form--active');
+          filterClose.classList.add('filter__close--active');
+          wrapper.classList.add('modal-wrapper--active');
+          body.classList.add('body--absolute');
+        }
       }
     });
 
@@ -50,6 +57,7 @@
       filterForm.classList.remove('filter__form--active');
       filterClose.classList.remove('filter__close--active');
       wrapper.classList.remove('modal-wrapper--active');
+      body.classList.remove('body--absolute');
     }
 
     filterClose.addEventListener('click', closeFilter);

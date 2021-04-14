@@ -23,6 +23,7 @@
   position: absolute;
   overflow: scroll;
   z-index: 2;
+  height: 439px;
   top: 19.5%;
   left: calc(50% - 250px);
 
@@ -33,6 +34,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    height: 519px;
     left: calc(50% - 145px);
     top: 5.5%;
   }

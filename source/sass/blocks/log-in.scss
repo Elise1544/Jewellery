@@ -20,6 +20,7 @@
   display: block;
   position: absolute;
   z-index: 2;
+  height: 587px;
   top: 2.44%;
   left: calc(50% - 215px);
   overflow-y: scroll;
@@ -32,6 +33,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    height: 470px;
     left: calc(50% - 135px);
     top: 0.93%;
   }
