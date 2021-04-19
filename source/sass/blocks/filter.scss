@@ -1,6 +1,6 @@
 .filter {
   margin-top: 20px;
-  position: relative;
+  // position: relative;
 
   @media (max-width: $tablet-width) {
     margin-top: 0;
@@ -35,6 +35,17 @@
   }
 }
 
+.filter__form--no-script {
+  @media (max-width: $tablet-width) {
+    display: block;
+    margin: 0 19px 0 13px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 13px;
+  }
+}
+
 .filter__form--active {
   @media (max-width: $tablet-width) {
     display: block;
@@ -43,7 +54,7 @@
     width: 56%;
     height: 570px;
     overflow-y: scroll;
-    top: 67px;
+    top: 34px;
     left: 0;
     z-index: 2;
   }
@@ -51,6 +62,7 @@
   @media (max-width: $mobile-width) {
     width: 100%;
     height: 480px;
+    top: 73px;
   }
 }
 
@@ -269,7 +281,7 @@
     position: absolute;
     width: 32px;
     height: 32px;
-    top: 50px;
+    top: 11px;
     right: 43%;
     background-image: url("../img/close.svg");
     border: none;
@@ -279,7 +291,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    top: 50px;
+    top: 59px;
     right: 5%;
   }
 }

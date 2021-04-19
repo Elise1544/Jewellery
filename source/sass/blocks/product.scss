@@ -70,9 +70,11 @@
 
 .product__pictures li {
   margin: 15px;
+  width: 16%;
 
   @media (max-width: $tablet-width) {
     margin: 7px 5px;
+    width: 100px;
   }
 
   @media (max-width: $mobile-width) {
@@ -82,6 +84,7 @@
 
 .product__pictures li:nth-child(1) {
   order: 1;
+  width: 76%;
 
   @media (max-width: $tablet-width) {
     order: 0;

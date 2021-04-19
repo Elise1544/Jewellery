@@ -31,14 +31,14 @@
       });
     }
 
-    filterForm.classList.remove('filter__form--active');
+    filterForm.classList.remove('filter__form--no-script');
 
     filterTitle.addEventListener('click', function () {
       if (filter.querySelector('.filter__form')) {
         filterForm.classList.add('filter__form--active');
         filterClose.classList.add('filter__close--active');
         wrapper.classList.add('modal-wrapper--active');
-        body.classList.add('body--absolute');
+        body.classList.add('body--no-scroll');
       }
     });
 
@@ -48,7 +48,7 @@
           filterForm.classList.add('filter__form--active');
           filterClose.classList.add('filter__close--active');
           wrapper.classList.add('modal-wrapper--active');
-          body.classList.add('body--absolute');
+          body.classList.add('body--no-scroll');
         }
       }
     });
@@ -57,7 +57,7 @@
       filterForm.classList.remove('filter__form--active');
       filterClose.classList.remove('filter__close--active');
       wrapper.classList.remove('modal-wrapper--active');
-      body.classList.remove('body--absolute');
+      body.classList.remove('body--no-scroll');
     }
 
     filterClose.addEventListener('click', closeFilter);

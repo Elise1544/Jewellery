@@ -40,7 +40,7 @@
     margin-left: 2px;
     padding: 0;
     width: 50px;
-    height: 50px;
+    min-height: 50px;
 
     background-color: transparent;
     border: none;
@@ -124,6 +124,13 @@
 
 .header--open svg {
   stroke: $white;
+}
+
+.header--active {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  flex-wrap: nowrap;
 }
 
 .header .search,
